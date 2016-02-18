@@ -1,1 +1,7 @@
-<%= @course.students%>
+<h1>Enrolled Students </h1>
+<% if @course.students.empty? %>
+  <p>No student enrollment information</p>
+<% else %>
+  <%= @course.students.all.first.first_name%>
+  <%= @course.students.all.first.last_name%>
+<% end %>
