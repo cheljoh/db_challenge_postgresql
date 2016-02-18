@@ -1,0 +1,16 @@
+<h1><%= "Student #{@student.first_name}'s Address" %><h1>
+
+<% if @student.addresses.empty? %>
+  <p>No address information</p>
+<% else %>
+  <%= @student.addresses.first.address_lines%>
+  <%= @student.addresses.first.city%>
+  <%= @student.addresses.first.state%>
+  <%= @student.addresses.first.zip_code%>
+<% end %>
+
+<% if @student.courses.empty? %>
+  <p> No course information</p>
+<% else %>
+  <%= @student.courses.first.name%>
+<% end %>

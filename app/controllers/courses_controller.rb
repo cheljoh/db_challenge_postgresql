@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
 
   def index
-    render text: "You've hit the courses index page"
+    @courses = Course.all
   end
 
   def create
@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-
+    @course = Course.find(params[:id])
   end
 
   def update
